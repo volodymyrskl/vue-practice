@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Jon Doe"
+    },
+    {
+      "id": 2,
+      "name": "Daniel Lee",
+      "isDefault": true
+    },
+    {
+      "id": 3,
+      "name": "Ana Ivanovici"
+    }
+]

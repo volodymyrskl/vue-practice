@@ -1,0 +1,20 @@
+[
+    {
+    "id": 1,
+    "display_name": "Jon Doe",
+    "organization": "Plant a tree",
+    "role": "Superviser"
+    },
+    {
+    "id": 2,
+    "display_name": "Daniel Lee",
+    "organization": "Eco planet",
+    "role": "Manager"
+    },
+    {
+    "id": 3,
+    "display_name": "Ana Ivanovici",
+    "organization": "Plant a tree",
+    "role": "Admin"
+    }
+]
