@@ -3,23 +3,22 @@ import { usersService } from "../services/users.service";
 
 export const useUsersStore = defineStore("Users", {
     state: () => ({
-        users: [],
-        defaultUser: {}
+        users: []
     }),
     actions: {
-        getUsers() {
-            const users = usersService.fetchUsers();
-            if (users) {
-                this.users = users;
+        async getUsers() {
+            try {
+                const users = await usersService.getUsers();
+
+                if (users) {
+                    this.users = users;
+                }
+            } catch (error) {
+                console.error(error);
             }
         },
-        selectDefaultUser(userName) {
-            const foundedUser = this.users.find((user) => user.name === userName)
-            console.log(foundedUser)
-            this.defaultUser = foundedUser;
-        }
     },
     getters: {
-        defaultUser: (state) => state.users.find((user) => user.isDefault === true)
+        defaultUser: (state) => { state.users.find((user) => user.isDefault === true) }
     }
 });
